@@ -160,6 +160,17 @@ class Zipper
     }
 
     /**
+     * Add content to the zip.
+     *
+     * @param $filename The name the content should be saved as in the zip
+     * @param $content The content of the file
+     */
+    public function addContent($filename, $content)
+    {
+        $this->repository->addContent($content, $this->getInternalPath() . $filename);
+    }
+
+    /**
      * Gets the status of the zip.
      *
      * @return integer The status of the internal zip file

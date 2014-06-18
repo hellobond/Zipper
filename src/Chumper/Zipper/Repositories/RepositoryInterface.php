@@ -33,6 +33,15 @@ interface RepositoryInterface
     public function addFile($pathToFile, $pathInArchive);
 
     /**
+     * Add content to the opened Archive
+     *
+     * @param $content
+     * @param $pathInArchive
+     * @return void
+     */
+     public function addContent($content, $pathInArchive);
+
+    /**
      * Remove a file permanently from the Archive
      *
      * @param $pathInArchive
