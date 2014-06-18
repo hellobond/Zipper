@@ -30,6 +30,18 @@ class ArrayArchive implements RepositoryInterface
     }
 
     /**
+     * Add content to the opened Archive
+     *
+     * @param $content
+     * @param $pathInArchive
+     * @return void
+     */
+    public function addContent($content, $pathInArchive)
+    {
+        $this->entries[$pathInArchive] = $pathInArchive;
+    }
+
+    /**
      * Remove a file permanently from the Archive
      *
      * @param $pathInArchive
